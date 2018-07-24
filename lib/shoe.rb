@@ -10,8 +10,9 @@ class Shoe
   def initialize(brand)
     #binding.pry
     @brand = brand
-    BRANDS << brand 
-    BRANDS.uniq
+    if !BRANDS.contain(brand) 
+      BRANDS << brand
+    end
   end
   
 
